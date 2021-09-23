@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-1</title>
+    <style>
+        /*type selector*/
+        h1{
+            background: yellow;
+        }
+        /*id slector*/
+        #idclass{
+            
+            background:rgb(209, 142, 142);
+            display: inline;
+        }
+        /*class selector*/
+        /*Combining Selectors*/
+        .div1 p.subdiv {
+            font-size: 16px;
+            background: #E4C0F5;
+            display: inline;
+            
+        }
+        .div1 p {
+            background: rgb(243, 101, 101);
+            display: inline-block;
+        }
+        /*Layering Styles with Multiple Classes*/
+        .btn {
+            font-size: 16px;
+        }
+        .btn-danger {
+            background:#B6E6AD;
+            color: green;
+            text-decoration: none;
+        }
+        .btn-success {
+            background: #9E9A9F;
+            text-decoration: none;
+        }
+        div.box {
+            width: 300px;
+            border: 15px solid rgb(178, 253, 178);
+            padding: 50px;
+            margin: 20px;
+        }
+        img{
+            width: 300px;
+            border-bottom: 15px solid rgb(226, 149, 149)  ;
+            border-left: 15px double #9a52bb;
+            border-top: 15px dashed #473e55;
+            border-right: 15px dotted #9a52bb;
+            padding: 50px;
+            margin-left: 50%;
+        
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 id="idclass">
+        Cascading Properties
+    </h1>
+    <div class="box">
+        <div class="div1">
+        <p>So far we’ve looked at how to use different types of selectors individually, <br>
+           but we also need to know how to use these selectors together.<br>
+           By combining selectors we can be more specific about which element or group of elements we’d like to select.</p><br>
+        <p>For example, say we want to select all paragraph elements that reside within an element with<br>
+            a class attribute value of hotdog and set their background color to brown.<br>
+            However, if one of those paragraphs happens to have the class attribute value of mustard,<br>
+            we want to set its background color to yellow.<br>
+            Our HTML and CSS may look like the following</p><br>
+        <p class="subdiv">When selectors are combined they should be read from right to left. <br>
+            The selector farthest to the right, <br>
+            directly before the opening curly bracket, is known as the key selector.<br>
+            The key selector identifies exactly which element the styles will be applied to.<br>
+            Any selector to the left of the key selector will serve as a prequalifier.</p>
+      </div>
+      <br>
+      <a href="" class="btn btn-danger">button1</a>
+      <a href="" class="btn btn-success">button2</a>
+      </div>
+      <img src="img1.jpg">
+
+</body>
+</html>
